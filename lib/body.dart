@@ -77,7 +77,8 @@ class Body extends StatelessWidget {
                 style: TextStyle(
                     fontWeight: FontWeight.w600,
                     fontStyle: FontStyle.italic,
-                    fontSize: 20.0
+                    fontSize: 20.0,
+                    //fontFamily: 'SassyFrass'
                 ),),
               subtitle: Text('በአቂዳ ዙርያ የተሰጡ ፈትዋዎች',
                 style: TextStyle(
@@ -284,6 +285,30 @@ class Body extends StatelessWidget {
                 ),),
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => Page10()));
+                 
+                },
+              ),
+            ),
+
+
+
+            Card(
+              elevation: 3.0,
+              child: ListTile(
+                tileColor: Color(0xFFF9F8FD),
+                title: Text('ትዳር 2',
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  fontStyle: FontStyle.italic,
+                  fontSize: 20.0
+                ),),
+                subtitle: Text('በትዳር ሀዲሶች ዙርያ የተሰጡ ፈትዋዎች',
+                style: TextStyle(
+                  fontSize: 15.0,
+                  fontWeight: FontWeight.w500
+                ),),
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Page11()));
                  
                 },
               ),
