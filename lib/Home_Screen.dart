@@ -23,6 +23,7 @@ class _HomeScreensState extends State<HomeScreens> {
 
   AppBar newMethod() {
     return AppBar(
+      backgroundColor: kPrimaryColor,
       title: Text('የ ዒልም ካዝና',
       style: TextStyle(
         color: kTextColor,

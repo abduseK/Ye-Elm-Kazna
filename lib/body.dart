@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:try_app/constants.dart';
 import 'package:try_app/pages.dart';
 import 'package:marquee/marquee.dart';
+import 'package:try_app/pages/page13.dart';
+import 'package:try_app/pages/page14.dart';
 
 
 
@@ -278,7 +280,7 @@ class Body extends StatelessWidget {
                   fontStyle: FontStyle.italic,
                   fontSize: 20.0
                 ),),
-                subtitle: Text('በትዳር ሀዲሶች ዙርያ የተሰጡ ፈትዋዎች',
+                subtitle: Text('በትዳር ዙርያ የተሰጡ ፈትዋዎች',
                 style: TextStyle(
                   fontSize: 15.0,
                   fontWeight: FontWeight.w500
@@ -302,13 +304,82 @@ class Body extends StatelessWidget {
                   fontStyle: FontStyle.italic,
                   fontSize: 20.0
                 ),),
-                subtitle: Text('በትዳር ሀዲሶች ዙርያ የተሰጡ ፈትዋዎች',
+                subtitle: Text('በትዳር ዙርያ የተሰጡ ፈትዋዎች',
                 style: TextStyle(
                   fontSize: 15.0,
                   fontWeight: FontWeight.w500
                 ),),
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => Page11()));
+                 
+                },
+              ),
+            ),
+
+
+            Card(
+              elevation: 3.0,
+              child: ListTile(
+                tileColor: Color(0xFFF9F8FD),
+                title: Text('ጡሃራ',
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  fontStyle: FontStyle.italic,
+                  fontSize: 20.0
+                ),),
+                subtitle: Text('በጡሃራ ዙርያ የተሰጡ ፈትዋዎች',
+                style: TextStyle(
+                  fontSize: 15.0,
+                  fontWeight: FontWeight.w500
+                ),),
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Page12()));
+                 
+                },
+              ),
+            ),
+
+
+            Card(
+              elevation: 3.0,
+              child: ListTile(
+                tileColor: Color(0xFFF9F8FD),
+                title: Text('ሴቶች 1',
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  fontStyle: FontStyle.italic,
+                  fontSize: 20.0
+                ),),
+                subtitle: Text('በሴቶች ዙርያ የተሰጡ ፈትዋዎች',
+                style: TextStyle(
+                  fontSize: 15.0,
+                  fontWeight: FontWeight.w500
+                ),),
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Page13()));
+                 
+                },
+              ),
+            ),
+
+
+             Card(
+              elevation: 3.0,
+              child: ListTile(
+                tileColor: Color(0xFFF9F8FD),
+                title: Text('ሴቶች 2',
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  fontStyle: FontStyle.italic,
+                  fontSize: 20.0
+                ),),
+                subtitle: Text('በሴቶች ዙርያ የተሰጡ ፈትዋዎች',
+                style: TextStyle(
+                  fontSize: 15.0,
+                  fontWeight: FontWeight.w500
+                ),),
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Page14()));
                  
                 },
               ),
