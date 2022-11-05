@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:try_app/constants.dart';
-import 'package:marquee/marquee.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Drawers extends StatelessWidget {

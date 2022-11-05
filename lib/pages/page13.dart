@@ -7,13 +7,6 @@ import 'package:share/share.dart';
 
 
 
-
-
-
-
-
-
-
 class Page13 extends StatefulWidget {
 
 
@@ -128,21 +121,12 @@ class _Page13State extends State<Page13> {
                 ),
               ),
               SizedBox(height: 40.0,),
-              SelectableText(
-                texts7[textNumber
-
-                ],
+              Text(
+                texts7[textNumber],
                 style: TextStyle(
                     fontSize: 15.0,
                     fontWeight: FontWeight.w600,
                   letterSpacing: 0.5
-                ),
-                showCursor: true,
-                toolbarOptions: ToolbarOptions(
-                    copy: true,
-                    cut: true,
-                    paste: true,
-                    selectAll: true
                 ),
               ),
               SizedBox(

@@ -1,16 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:try_app/constants.dart';
-import 'package:try_app/pages.dart';
 import 'package:marquee/marquee.dart';
+import 'package:try_app/pages/page1.dart';
+import 'package:try_app/pages/page2.dart';
+import 'package:try_app/pages/page3.dart';
+import 'package:try_app/pages/page4.dart';
+import 'package:try_app/pages/page5.dart';
+import 'package:try_app/pages/page6.dart';
+import 'package:try_app/pages/page7.dart';
+import 'package:try_app/pages/page8.dart';
+import 'package:try_app/pages/page9.dart';
+import 'package:try_app/pages/page10.dart';
+import 'package:try_app/pages/page11.dart';
+import 'package:try_app/pages/page12.dart';
 import 'package:try_app/pages/page13.dart';
 import 'package:try_app/pages/page14.dart';
 
 
-
-
 class Body extends StatelessWidget {
-
-
 
 
   @override
