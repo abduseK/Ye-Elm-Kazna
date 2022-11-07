@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:try_app/constants.dart';
+import 'package:try_app/widgets/constants.dart';
 import 'package:try_app/files/listfiles6.dart';
 import 'package:share/share.dart';
 
@@ -110,54 +110,46 @@ class _Page14State extends State<Page14> {
                 child: Padding(
                   padding: const EdgeInsets.all(18.0),
                   child: Text(questions7[questionNumber],
-                    style: TextStyle(
-                        fontSize: 15.0,
-                        fontStyle: FontStyle.italic,
-                        color: Color(0xFF0C9869)
-                    ),
+                    style: questionTextStyle
                   ),
                 ),
               ),
               SizedBox(height: 40.0,),
               Text(
                 texts7[textNumber],
-                style: TextStyle(
-                    fontSize: 15.0,
-                    fontWeight: FontWeight.w600,
-                  letterSpacing: 0.5
-                ),
+                style: mainTextStyle
               ),
               SizedBox(
                 height: 20.0,
               ),
 
               Card(
-      color: kBackgroundColor,
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(20),
-              bottomRight: Radius.circular(20)
-          )
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(18.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Icon(Icons.source,
-              color: kPrimaryColor,),
-            SizedBox(width: 20.0,),
-            Expanded(
-              child: Text(sources7[sourceNumber],
-                style: TextStyle(
-                    color: Color(0xFF0C9869),
-                    fontStyle: FontStyle.italic
-                ),),
-            )
-          ],
-        ),
-      ),
-    )
+                  color: kBackgroundColor,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(20),
+                          bottomRight: Radius.circular(20)
+                      )
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(18.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Icon(Icons.source,
+                          color: kPrimaryColor,),
+                        SizedBox(width: 20.0,),
+                        Expanded(
+                          child: Text(sources7[sourceNumber],
+                            style: TextStyle(
+                                color: Color(0xFF0C9869),
+                                fontStyle: FontStyle.italic
+                            ),),
+                        )
+                      ],
+                    ),
+                  ),
+              )
 
             ],
           ),

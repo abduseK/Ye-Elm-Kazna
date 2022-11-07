@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:try_app/constants.dart';
+import 'package:try_app/widgets/constants.dart';
 import 'package:try_app/files/listfiles.dart';
 import 'package:share/share.dart';
 import 'package:try_app/refractor_widgets.dart';
@@ -118,23 +118,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Padding(
                   padding: const EdgeInsets.all(18.0),
                   child: Text(questions[questionNumber],
-                  style: TextStyle(
-                    fontSize: 15.0,
-                    fontStyle: FontStyle.italic,
-                    color: kPrimaryColor
-                  ),
+                  style: questionTextStyle
                   ),
                 ),
               ),
               SizedBox(height: 40.0,),
               Text(
                 texts[textNumber],
-              style: TextStyle(
-                fontSize: 15.0,
-                fontWeight: FontWeight.w600,
-                letterSpacing: 0.5,
-                //fontFamily: 'SassyFrass'
-              ),
+                style: mainTextStyle
               ),
 
               SizedBox(

@@ -66,11 +66,17 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   #example:
   fonts:
-    - family: IndieFlower
-    - family: SassyFrass
+    - family: Kiros
+    - family: Amhara
+    - family: Meaza
+    - family: Niyala
       fonts:
-        - asset: lib/files/fonts/IndieFlower-Regular.ttf
-        - asset: lib/files/fonts/SassyFrass-Regular.ttf
+        - asset: assets/fonts/Kiros(ኪሮስ).ttf
+          weight: 700
+        - asset: assets/fonts/Amhara.ttf
+        - asset: assets/fonts/Meaza(መዓዛ).ttf
+        - asset: assets/fonts/Niyala(ኒያላ).ttf
+          weight: 700
        
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf

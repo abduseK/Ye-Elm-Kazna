@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:try_app/constants.dart';
+import 'package:try_app/widgets/constants.dart';
 import 'package:try_app/files/listfiles5.dart';
 import 'package:share/share.dart';
 
@@ -111,54 +111,46 @@ class _Page12State extends State<Page12> {
                 child: Padding(
                   padding: const EdgeInsets.all(18.0),
                   child: Text(questions6[questionNumber],
-                    style: TextStyle(
-                        fontSize: 15.0,
-                        fontStyle: FontStyle.italic,
-                        color: Color(0xFF0C9869)
-                    ),
+                    style: questionTextStyle
                   ),
                 ),
               ),
               SizedBox(height: 40.0,),
               Text(
                 texts6[textNumber],
-                style: TextStyle(
-                    fontSize: 15.0,
-                    fontWeight: FontWeight.w600,
-                  letterSpacing: 0.5
-                ),
+                style: mainTextStyle
               ),
               SizedBox(
                 height: 20.0,
               ),
 
               Card(
-      color: kBackgroundColor,
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(20),
-              bottomRight: Radius.circular(20)
+                color: kBackgroundColor,
+                shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(20),
+                            bottomRight: Radius.circular(20)
+                        )
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(18.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Icon(Icons.source,
+                        color: kPrimaryColor,),
+                      SizedBox(width: 20.0,),
+                      Expanded(
+                        child: Text(sources6[sourceNumber],
+                          style: TextStyle(
+                              color: Color(0xFF0C9869),
+                              fontStyle: FontStyle.italic
+                          ),),
+                      )
+                    ],
+                  ),
+                ),
           )
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(18.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Icon(Icons.source,
-              color: kPrimaryColor,),
-            SizedBox(width: 20.0,),
-            Expanded(
-              child: Text(sources6[sourceNumber],
-                style: TextStyle(
-                    color: Color(0xFF0C9869),
-                    fontStyle: FontStyle.italic
-                ),),
-            )
-          ],
-        ),
-      ),
-    )
 
             ],
           ),

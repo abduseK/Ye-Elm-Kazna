@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:try_app/constants.dart';
+import 'package:try_app/widgets/constants.dart';
 import 'package:try_app/files/listfiles.dart';
 import 'package:share/share.dart';
 import 'package:try_app/refractor_widgets.dart';
@@ -111,22 +111,14 @@ class _Page2State extends State<Page2> {
                 child: Padding(
                   padding: const EdgeInsets.all(18.0),
                   child: Text(questions[questionNumber],
-                    style: TextStyle(
-                        fontSize: 15.0,
-                        fontStyle: FontStyle.italic,
-                        color: Color(0xFF0C9869)
-                    ),
+                    style: questionTextStyle
                   ),
                 ),
               ),
               SizedBox(height: 40.0,),
               Text(
                 texts[textNumber],
-                style: TextStyle(
-                    fontSize: 15.0,
-                    fontWeight: FontWeight.w600,
-                  letterSpacing: 0.5
-                ),
+                style: mainTextStyle
               ),
               SizedBox(
                 height: 20.0,
