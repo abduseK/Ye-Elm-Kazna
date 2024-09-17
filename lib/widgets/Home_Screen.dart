@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:try_app/widgets/body.dart';
-import 'package:try_app/constants.dart';
-import 'package:try_app/widgets/drawer.dart';
+import 'package:ye_elm_kazna/widgets/body.dart';
+import 'package:ye_elm_kazna/constants.dart';
+import 'package:ye_elm_kazna/widgets/drawer.dart';
 
 
 class HomeScreens extends StatefulWidget {

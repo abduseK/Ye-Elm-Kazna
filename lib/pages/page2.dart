@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:try_app/constants.dart';
-import 'package:try_app/files/listfiles.dart';
+import 'package:ye_elm_kazna/constants.dart';
+import 'package:ye_elm_kazna/files/listfiles.dart';
 import 'package:share/share.dart';
-import 'package:try_app/widgets/refractor_widgets.dart';
+import 'package:ye_elm_kazna/widgets/refractor_widgets.dart';
 
 
 
@@ -30,9 +30,10 @@ class _Page2State extends State<Page2> {
     return Scaffold(
       backgroundColor: Color(0xFFF9F8FD),
       appBar: AppBar(
-        flexibleSpace: Text("\n\n\n\n\n\n            " + appTitless[barNumber],
+        centerTitle: true,
+        title: Text(appTitless[barNumber],
         style: TextStyle(
-          color: kBackgroundColor
+          fontSize: 16
         ),
         ),
         backgroundColor: Color(0xFF0C9869),

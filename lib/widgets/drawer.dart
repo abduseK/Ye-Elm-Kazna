@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:try_app/constants.dart';
+import 'package:ye_elm_kazna/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Drawers extends StatelessWidget {

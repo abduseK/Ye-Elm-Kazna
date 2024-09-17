@@ -1,29 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:try_app/constants.dart';
-import 'package:try_app/files/listfiles.dart';
-import 'package:try_app/files/listfiles2.dart';
-import 'package:try_app/files/listfiles3.dart';
-import 'package:try_app/files/shortfiles.dart';
+import 'package:ye_elm_kazna/constants.dart';
+import 'package:ye_elm_kazna/files/listfiles.dart';
+import 'package:ye_elm_kazna/files/listfiles2.dart';
+import 'package:ye_elm_kazna/files/listfiles3.dart';
+import 'package:ye_elm_kazna/files/shortfiles.dart';
 
 
 class NewCard extends StatelessWidget {
   const NewCard({
-    Key key,
-    @required this.sourceNumber,
-  }) : super(key: key);
+    required this.sourceNumber,
+  });
 
   final int sourceNumber;
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: kBackgroundColor,
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(20),
-              bottomRight: Radius.circular(20)
-          )
-      ),
+      elevation: 0,
+      color: Color(0xFF2A2A2A),
       child: Padding(
         padding: const EdgeInsets.all(18.0),
         child: Row(
@@ -35,7 +29,7 @@ class NewCard extends StatelessWidget {
             Expanded(
               child: Text(sources[sourceNumber],
                 style: TextStyle(
-                    color: Color(0xFF0C9869),
+                    color: Colors.white,
                     fontStyle: FontStyle.italic
                 ),),
             )
@@ -49,22 +43,17 @@ class NewCard extends StatelessWidget {
 
 class NewCard2 extends StatelessWidget {
   const NewCard2({
-    Key key,
-    @required this.sourceNumber,
-  }) : super(key: key);
+   
+    required this.sourceNumber,
+  });
 
   final int sourceNumber;
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: kBackgroundColor,
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(20),
-              bottomRight: Radius.circular(20)
-          )
-      ),
+      elevation: 0,
+      color: Color(0xFF2A2A2A),
       child: Padding(
         padding: const EdgeInsets.all(18.0),
         child: Row(
@@ -90,22 +79,17 @@ class NewCard2 extends StatelessWidget {
 
 class NewCard4 extends StatelessWidget {
   const NewCard4({
-    Key key,
-    @required this.sourceNumber,
-  }) : super(key: key);
+    
+    required this.sourceNumber,
+  });
 
   final int sourceNumber;
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: kBackgroundColor,
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(20),
-              bottomRight: Radius.circular(20)
-          )
-      ),
+      elevation: 0,
+      color: Color(0xFF2A2A2A),
       child: Padding(
         padding: const EdgeInsets.all(18.0),
         child: Row(
@@ -131,22 +115,16 @@ class NewCard4 extends StatelessWidget {
 
 class NewCard3 extends StatelessWidget {
   const NewCard3({
-    Key key,
-    @required this.sourceNumber,
-  }) : super(key: key);
+    required this.sourceNumber,
+  });
 
   final int sourceNumber;
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: kBackgroundColor,
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(20),
-              bottomRight: Radius.circular(20)
-          )
-      ),
+      elevation: 0,
+      color: Color(0xFF2A2A2A),
       child: Padding(
         padding: const EdgeInsets.all(18.0),
         child: Row(

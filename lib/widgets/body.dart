@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:try_app/constants.dart';
+import 'package:ye_elm_kazna/constants.dart';
 import 'package:marquee/marquee.dart';
-import 'package:try_app/pages/page1.dart';
-import 'package:try_app/pages/page2.dart';
-import 'package:try_app/pages/page3.dart';
-import 'package:try_app/pages/page4.dart';
-import 'package:try_app/pages/page5.dart';
-import 'package:try_app/pages/page6.dart';
-import 'package:try_app/pages/page7.dart';
-import 'package:try_app/pages/page8.dart';
-import 'package:try_app/pages/page9.dart';
-import 'package:try_app/pages/page10.dart';
-import 'package:try_app/pages/page11.dart';
-import 'package:try_app/pages/page12.dart';
-import 'package:try_app/pages/page13.dart';
-import 'package:try_app/pages/page14.dart';
+import 'package:ye_elm_kazna/pages/page1.dart';
+import 'package:ye_elm_kazna/pages/page2.dart';
+import 'package:ye_elm_kazna/pages/page3.dart';
+import 'package:ye_elm_kazna/pages/page4.dart';
+import 'package:ye_elm_kazna/pages/page5.dart';
+import 'package:ye_elm_kazna/pages/page6.dart';
+import 'package:ye_elm_kazna/pages/page7.dart';
+import 'package:ye_elm_kazna/pages/page8.dart';
+import 'package:ye_elm_kazna/pages/page9.dart';
+import 'package:ye_elm_kazna/pages/page10.dart';
+import 'package:ye_elm_kazna/pages/page11.dart';
+import 'package:ye_elm_kazna/pages/page12.dart';
+import 'package:ye_elm_kazna/pages/page13.dart';
+import 'package:ye_elm_kazna/pages/page14.dart';
+import 'package:ye_elm_kazna/pages/trypage.dart';
 
 
 class Body extends StatelessWidget {
@@ -95,7 +96,7 @@ class Body extends StatelessWidget {
                     fontWeight: FontWeight.w500
                 ),),
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => Page2()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => TryPage()));
               },
             ),
           ),
