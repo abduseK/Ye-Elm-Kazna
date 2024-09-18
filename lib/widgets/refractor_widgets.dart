@@ -5,6 +5,7 @@ import 'package:ye_elm_kazna/files/listfiles2.dart';
 import 'package:ye_elm_kazna/files/listfiles3.dart';
 import 'package:ye_elm_kazna/files/shortfiles.dart';
 import 'package:ye_elm_kazna/files/listfiles4.dart';
+import 'package:ye_elm_kazna/files/listfiles5.dart';
 
 class NewCard extends StatelessWidget {
   const NewCard({
@@ -182,6 +183,44 @@ class NewCard5 extends StatelessWidget {
             Expanded(
               child: Text(
                 sources5[sourceNumber],
+                style:
+                    TextStyle(color: Colors.white, fontStyle: FontStyle.italic),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class NewCard6 extends StatelessWidget {
+  const NewCard6({
+    required this.sourceNumber,
+  });
+
+  final int sourceNumber;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 0,
+      color: Color(0xFF2A2A2A),
+      child: Padding(
+        padding: const EdgeInsets.all(18.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Icon(
+              Icons.source,
+              color: kPrimaryColor,
+            ),
+            SizedBox(
+              width: 20.0,
+            ),
+            Expanded(
+              child: Text(
+                sources6[sourceNumber],
                 style:
                     TextStyle(color: Colors.white, fontStyle: FontStyle.italic),
               ),
