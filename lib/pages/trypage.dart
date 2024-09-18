@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ye_elm_kazna/constants.dart';
 import 'package:ye_elm_kazna/files/listfiles.dart';
-import 'package:share/share.dart';
 import 'package:ye_elm_kazna/widgets/refractor_widgets.dart';
 
 class TryPage extends StatefulWidget {
@@ -92,7 +90,10 @@ class _TryPageState extends State<TryPage> {
           Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: [Color(0xFF121212), Color(0xFF1E1E1E)], // Dark gradient background
+                colors: [
+                  Color(0xFF121212),
+                  Color(0xFF1E1E1E)
+                ], // Dark gradient background
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
               ),
@@ -101,7 +102,8 @@ class _TryPageState extends State<TryPage> {
           // Main content
           SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 120.0),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 120.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -126,22 +128,24 @@ class _TryPageState extends State<TryPage> {
                     ),
                   ),
                   SizedBox(height: 40.0),
-                  
+
                   // Main Text Content
                   Text(
                     texts[textNumber],
                     style: TextStyle(
                       fontSize: 16,
-                      color: Colors.white70, // Slightly muted white text for body content
+                      color: Colors
+                          .white70, // Slightly muted white text for body content
                       height: 1.5,
                     ),
                   ),
-                  
+
                   SizedBox(height: 20.0),
-                  
+
                   // Source Card
                   Card(
-                    color: Color(0xFF2A2A2A), // Same dark background for consistency
+                    color: Color(
+                        0xFF2A2A2A), // Same dark background for consistency
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),

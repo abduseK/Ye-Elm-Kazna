@@ -5,7 +5,6 @@ import 'package:ye_elm_kazna/files/listfiles2.dart';
 import 'package:ye_elm_kazna/files/listfiles3.dart';
 import 'package:ye_elm_kazna/files/shortfiles.dart';
 
-
 class NewCard extends StatelessWidget {
   const NewCard({
     required this.sourceNumber,
@@ -23,15 +22,19 @@ class NewCard extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Icon(Icons.source,
-              color: kPrimaryColor,),
-            SizedBox(width: 20.0,),
+            Icon(
+              Icons.source,
+              color: kPrimaryColor,
+            ),
+            SizedBox(
+              width: 20.0,
+            ),
             Expanded(
-              child: Text(sources[sourceNumber],
-                style: TextStyle(
-                    color: Colors.white,
-                    fontStyle: FontStyle.italic
-                ),),
+              child: Text(
+                sources[sourceNumber],
+                style:
+                    TextStyle(color: Colors.white, fontStyle: FontStyle.italic),
+              ),
             )
           ],
         ),
@@ -39,11 +42,9 @@ class NewCard extends StatelessWidget {
     );
   }
 }
-
 
 class NewCard2 extends StatelessWidget {
   const NewCard2({
-   
     required this.sourceNumber,
   });
 
@@ -59,15 +60,16 @@ class NewCard2 extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Icon(Icons.source,
-                color: kPrimaryColor),
-            SizedBox(width: 20.0,),
+            Icon(Icons.source, color: kPrimaryColor),
+            SizedBox(
+              width: 20.0,
+            ),
             Expanded(
-              child: Text(sources2[sourceNumber],
-                style: TextStyle(
-                    color: Color(0xFF0C9869),
-                    fontStyle: FontStyle.italic
-                ),),
+              child: Text(
+                sources2[sourceNumber],
+                style:
+                    TextStyle(color: Colors.white, fontStyle: FontStyle.italic),
+              ),
             )
           ],
         ),
@@ -75,11 +77,9 @@ class NewCard2 extends StatelessWidget {
     );
   }
 }
-
 
 class NewCard4 extends StatelessWidget {
   const NewCard4({
-    
     required this.sourceNumber,
   });
 
@@ -95,15 +95,19 @@ class NewCard4 extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Icon(Icons.source,
-              color: kPrimaryColor,),
-            SizedBox(width: 20.0,),
+            Icon(
+              Icons.source,
+              color: kPrimaryColor,
+            ),
+            SizedBox(
+              width: 20.0,
+            ),
             Expanded(
-              child: Text(sources3[sourceNumber],
-                style: TextStyle(
-                    color: Color(0xFF0C9869),
-                    fontStyle: FontStyle.italic
-                ),),
+              child: Text(
+                sources3[sourceNumber],
+                style:
+                    TextStyle(color: Colors.white, fontStyle: FontStyle.italic),
+              ),
             )
           ],
         ),
@@ -111,7 +115,6 @@ class NewCard4 extends StatelessWidget {
     );
   }
 }
-
 
 class NewCard3 extends StatelessWidget {
   const NewCard3({
@@ -130,15 +133,19 @@ class NewCard3 extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Icon(Icons.source,
-              color: kPrimaryColor,),
-            SizedBox(width: 20.0,),
+            Icon(
+              Icons.source,
+              color: kPrimaryColor,
+            ),
+            SizedBox(
+              width: 20.0,
+            ),
             Expanded(
-              child: Text(sources4[sourceNumber],
-                style: TextStyle(
-                    color: Color(0xFF0C9869),
-                    fontStyle: FontStyle.italic
-                ),),
+              child: Text(
+                sources4[sourceNumber],
+                style:
+                    TextStyle(color: Colors.white, fontStyle: FontStyle.italic),
+              ),
             )
           ],
         ),
@@ -146,4 +153,3 @@ class NewCard3 extends StatelessWidget {
     );
   }
 }
-
