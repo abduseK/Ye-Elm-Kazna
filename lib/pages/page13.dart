@@ -1,163 +1,167 @@
 import 'package:flutter/material.dart';
-import 'package:ye_elm_kazna/constants.dart';
 import 'package:ye_elm_kazna/files/listfiles6.dart';
-import 'package:share/share.dart';
-
-
-
-
+import 'package:ye_elm_kazna/widgets/refractor_widgets.dart';
 
 class Page13 extends StatefulWidget {
-
-
-
   @override
-
   _Page13State createState() => _Page13State();
 }
 
 class _Page13State extends State<Page13> {
-
-
-
-  @override
-
   int barNumber = 0;
   int textNumber = 0;
   int sourceNumber = 0;
   int questionNumber = 0;
 
+  void updateNumbers(int change) {
+    setState(() {
+      barNumber += change;
+      textNumber += change;
+      sourceNumber += change;
+      questionNumber += change;
+
+      if (barNumber < 0) {
+        barNumber = 0;
+        textNumber = 0;
+        sourceNumber = 0;
+        questionNumber = 0;
+      } else if (barNumber > 17) {
+        barNumber = 17;
+        textNumber = 17;
+        sourceNumber = 17;
+        questionNumber = 17;
+      }
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF9F8FD),
-      appBar: AppBar(
-        flexibleSpace: Text("\n\n\n\n\n\n            " + appTitless7[barNumber],
-        style: TextStyle(
-          color: kBackgroundColor
-        ),
-        ),
-        backgroundColor: Color(0xFF0C9869),
-        toolbarHeight: 115.0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(20),
-            bottomRight: Radius.circular(20)
-          )
-        ),
-        leading: IconButton(
-          onPressed: () {
-            setState(() {
-              barNumber--;
-              textNumber--;
-              sourceNumber--;
-              questionNumber--;
-              if(barNumber < 0)
-              {
-                barNumber = 0;
-                questionNumber = 0;
-                sourceNumber = 0;
-                textNumber = 0;
-              }
-            });
-          },
-          icon: Icon(Icons.arrow_back_ios),),
-        actions: [
-          TextButton(
-                onPressed: () {
-                  Share.share(
-                    texts7[textNumber],
-                  );
-                },
-                child: Icon(Icons.send,
-                color: kBackgroundColor,),
-                
+      extendBodyBehindAppBar: true,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(100.0),
+        child: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Color(0xFF121212), Color(0xFF1E1E1E)], // Dark gradient
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
               ),
-          IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: Icon(Icons.list_sharp)
+            ),
           ),
-          IconButton(
-            onPressed: () {
-              setState(() {
-                barNumber++;
-                textNumber++;
-                sourceNumber++;
-                questionNumber++;
-                if(barNumber > 17)
-                {
-                  barNumber = 17;
-                  questionNumber = 17;
-                  sourceNumber = 17;
-                  textNumber = 17;
-                }
-
-              });
-            },
-            icon: Icon(Icons.arrow_forward_ios),)
-        ],
+          centerTitle: true,
+          title: Padding(
+            padding: const EdgeInsets.only(top: 20.0),
+            child: Text(
+              appTitless7[barNumber],
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.white, // White text for contrast
+              ),
+            ),
+          ),
+          leading: IconButton(
+            onPressed: () => updateNumbers(-1),
+            icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+          ),
+          actions: [
+            // IconButton(
+            //   onPressed: () => Share.share(texts[textNumber]),
+            //   icon: Icon(Icons.send, color: Colors.white),
+            // ),
+            IconButton(
+              onPressed: () => Navigator.pop(context),
+              icon: Icon(Icons.list_sharp, color: Colors.white),
+            ),
+            IconButton(
+              onPressed: () => updateNumbers(1),
+              icon: Icon(Icons.arrow_forward_ios, color: Colors.white),
+            ),
+          ],
+        ),
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.only(left: 20.0, top: 40.0, right: 15.0),
-          child: Column(
-            children: [
-              Card(
-                color: kBackgroundColor,
-                elevation: 3,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20)
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(18.0),
-                  child: Text(questions7[questionNumber],
-                    style: questionTextStyle
-                  ),
-                ),
+      body: Stack(
+        children: [
+          // Dark background
+          Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  Color(0xFF121212),
+                  Color(0xFF1E1E1E)
+                ], // Dark gradient background
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
               ),
-              SizedBox(height: 40.0,),
-              Text(
-                texts7[textNumber],
-                style: mainTextStyle
-              ),
-              SizedBox(
-                height: 20.0,
-              ),
-
-              Card(
-                color: kBackgroundColor,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(20),
-                        bottomRight: Radius.circular(20)
-                    )
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(18.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Icon(Icons.source,
-                        color: kPrimaryColor,),
-                      SizedBox(width: 20.0,),
-                      Expanded(
-                        child: Text(sources7[sourceNumber],
-                          style: TextStyle(
-                              color: Color(0xFF0C9869),
-                              fontStyle: FontStyle.italic
-                          ),),
-                      )
-                    ],
-                  ),
-                ),
-            )
-
-            ],
+            ),
           ),
-        ),
+          // Main content
+          SingleChildScrollView(
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 120.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Question Card
+                  Card(
+                    color: Color(0xFF2A2A2A), // Darker card background
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    elevation: 2, // Minimal shadow
+                    shadowColor: Colors.black.withOpacity(0.5),
+                    child: Padding(
+                      padding: const EdgeInsets.all(18.0),
+                      child: Text(
+                        questions7[questionNumber],
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white, // Light text for contrast
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 40.0),
+
+                  // Main Text Content
+                  Text(
+                    texts7[textNumber],
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors
+                          .white70, // Slightly muted white text for body content
+                      height: 1.5,
+                    ),
+                  ),
+
+                  SizedBox(height: 20.0),
+
+                  // Source Card
+                  Card(
+                    color: Color(
+                        0xFF2A2A2A), // Same dark background for consistency
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    elevation: 2, // Subtle shadow
+                    shadowColor: Colors.black.withOpacity(0.5),
+                    child: Padding(
+                      padding: const EdgeInsets.all(18.0),
+                      child: NewCard7(sourceNumber: sourceNumber),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
 }
-
