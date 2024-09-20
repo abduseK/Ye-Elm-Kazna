@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:ye_elm_kazna/constants.dart';
 import 'package:marquee/marquee.dart';
 import 'package:ye_elm_kazna/pages/page1.dart';
-import 'package:ye_elm_kazna/pages/page2.dart';
 import 'package:ye_elm_kazna/pages/page3.dart';
 import 'package:ye_elm_kazna/pages/page4.dart';
 import 'package:ye_elm_kazna/pages/page5.dart';

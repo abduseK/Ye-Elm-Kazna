@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:share/share.dart';
 import 'package:ye_elm_kazna/files/listfiles.dart';
 import 'package:ye_elm_kazna/widgets/refractor_widgets.dart';
 
@@ -53,33 +54,53 @@ class _TryPageState extends State<TryPage> {
             ),
           ),
           centerTitle: true,
-          title: Padding(
-            padding: const EdgeInsets.only(top: 20.0),
-            child: Text(
-              appTitless[barNumber],
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Colors.white, // White text for contrast
+          title: Text(
+            appTitless[barNumber],
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.white, // White text for contrast
+            ),
+          ),
+          leading: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: CircleAvatar(
+              backgroundColor: Color(0xFF2A2A2A),
+              child: IconButton(
+                iconSize: 18,
+                onPressed: () => updateNumbers(-1),
+                icon: Icon(
+                  Icons.arrow_back_ios,
+                  color: Colors.white,
+                ),
               ),
             ),
           ),
-          leading: IconButton(
-            onPressed: () => updateNumbers(-1),
-            icon: Icon(Icons.arrow_back_ios, color: Colors.white),
-          ),
           actions: [
-            // IconButton(
-            //   onPressed: () => Share.share(texts[textNumber]),
-            //   icon: Icon(Icons.send, color: Colors.white),
-            // ),
-            IconButton(
-              onPressed: () => Navigator.pop(context),
-              icon: Icon(Icons.list_sharp, color: Colors.white),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: IconButton(
+                onPressed: () => Share.share(texts[textNumber]),
+                icon: Icon(Icons.send, color: Colors.white),
+              ),
             ),
-            IconButton(
-              onPressed: () => updateNumbers(1),
-              icon: Icon(Icons.arrow_forward_ios, color: Colors.white),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: IconButton(
+                onPressed: () => Navigator.pop(context),
+                icon: Icon(Icons.list_sharp, color: Colors.white),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: CircleAvatar(
+                backgroundColor: Color(0xFF2A2A2A),
+                child: IconButton(
+                  iconSize: 18,
+                  onPressed: () => updateNumbers(1),
+                  icon: Icon(Icons.arrow_forward_ios, color: Colors.white),
+                ),
+              ),
             ),
           ],
         ),
