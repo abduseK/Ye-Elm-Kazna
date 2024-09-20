@@ -14,7 +14,7 @@ class _HomeScreensState extends State<HomeScreens> {
     return Scaffold(
       backgroundColor: Color(0xFF121212),
       appBar: newMethod(),
-      drawer: Drawers(),
+      // drawer: Drawers(),
       body: Body(),
     );
   }
@@ -34,6 +34,7 @@ class _HomeScreensState extends State<HomeScreens> {
         'የ ዒልም ካዝና',
         style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
       ),
+      centerTitle: true,
       elevation: 0,
       actions: [
         PopupMenuButton(
