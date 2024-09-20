@@ -110,17 +110,8 @@ class Body extends StatelessWidget {
             elevation: 3.0,
             child: ListTile(
               tileColor: Color(0xFF121212),
-              title: Text(
-                'ቢድዐ 2',
-                style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontStyle: FontStyle.italic,
-                    fontSize: 20.0),
-              ),
-              subtitle: Text(
-                'በቢድዐ እና መንሃጅ ዙርያ የተሰጡ ፈትዋዎች',
-                style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.w500),
-              ),
+              title: TitleText(title: 'ቢድዐ 2'),
+              subtitle: SubtitleText(subtitle: 'በቢድዐ እና መንሃጅ ዙርያ የተሰጡ ፈትዋዎች'),
               onTap: () {
                 Navigator.push(
                     context, MaterialPageRoute(builder: (context) => Page4()));
@@ -131,17 +122,8 @@ class Body extends StatelessWidget {
             elevation: 3.0,
             child: ListTile(
               tileColor: Color(0xFF121212),
-              title: Text(
-                'ሶላት 1',
-                style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontStyle: FontStyle.italic,
-                    fontSize: 20.0),
-              ),
-              subtitle: Text(
-                'በሶላት ዙርያ የተሰጡ ፈትዋዎች',
-                style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.w500),
-              ),
+              title: TitleText(title: 'ሶላት 1'),
+              subtitle: SubtitleText(subtitle: 'በሶላት ዙርያ የተሰጡ ፈትዋዎች'),
               onTap: () {
                 Navigator.push(
                     context, MaterialPageRoute(builder: (context) => Page5()));
@@ -152,17 +134,8 @@ class Body extends StatelessWidget {
             elevation: 3.0,
             child: ListTile(
               tileColor: Color(0xFF121212),
-              title: Text(
-                'ሶላት 2',
-                style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontStyle: FontStyle.italic,
-                    fontSize: 20.0),
-              ),
-              subtitle: Text(
-                'በሶላት ዙርያ የተሰጡ ፈትዋዎች',
-                style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.w500),
-              ),
+              title: TitleText(title: 'ሶላት 2'),
+              subtitle: SubtitleText(subtitle: 'በሶላት ዙርያ የተሰጡ ፈትዋዎች'),
               onTap: () {
                 Navigator.push(
                     context, MaterialPageRoute(builder: (context) => Page6()));
@@ -173,17 +146,8 @@ class Body extends StatelessWidget {
             elevation: 3.0,
             child: ListTile(
               tileColor: Color(0xFF121212),
-              title: Text(
-                'ጾም',
-                style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontStyle: FontStyle.italic,
-                    fontSize: 20.0),
-              ),
-              subtitle: Text(
-                'በጾም ዙርያ የተሰጡ ፈትዋዎች',
-                style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.w500),
-              ),
+              title: TitleText(title: 'ጾም'),
+              subtitle: SubtitleText(subtitle: 'በጾም ዙርያ የተሰጡ ፈትዋዎች'),
               onTap: () {
                 Navigator.push(
                     context, MaterialPageRoute(builder: (context) => Page1()));
@@ -194,17 +158,8 @@ class Body extends StatelessWidget {
             elevation: 3.0,
             child: ListTile(
               tileColor: Color(0xFF121212),
-              title: Text(
-                'ዒድ',
-                style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontStyle: FontStyle.italic,
-                    fontSize: 20.0),
-              ),
-              subtitle: Text(
-                'በዒድ ዙርያ የተሰጡ ፈትዋዎች',
-                style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.w500),
-              ),
+              title: TitleText(title: 'ዒድ'),
+              subtitle: SubtitleText(subtitle: 'በዒድ ዙርያ የተሰጡ ፈትዋዎች'),
               onTap: () {
                 Navigator.push(
                     context, MaterialPageRoute(builder: (context) => Page7()));
@@ -215,17 +170,8 @@ class Body extends StatelessWidget {
             elevation: 3.0,
             child: ListTile(
               tileColor: Color(0xFF121212),
-              title: Text(
-                'ጁሙዓ',
-                style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontStyle: FontStyle.italic,
-                    fontSize: 20.0),
-              ),
-              subtitle: Text(
-                'በጁሙዓ ዙርያ የተሰጡ ፈትዋዎች',
-                style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.w500),
-              ),
+              title: TitleText(title: 'ጁሙዓ'),
+              subtitle: SubtitleText(subtitle: 'በጁሙዓ ዙርያ የተሰጡ ፈትዋዎች'),
               onTap: () {
                 Navigator.push(
                     context, MaterialPageRoute(builder: (context) => Page8()));
@@ -236,17 +182,8 @@ class Body extends StatelessWidget {
             elevation: 3.0,
             child: ListTile(
               tileColor: Color(0xFF121212),
-              title: Text(
-                'ዶዒፍ ሀዲሶች',
-                style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontStyle: FontStyle.italic,
-                    fontSize: 20.0),
-              ),
-              subtitle: Text(
-                'በዶዒፍ ሀዲሶች ዙርያ የተሰጡ ፈትዋዎች',
-                style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.w500),
-              ),
+              title: TitleText(title: 'ዶዒፍ ሀዲሶች'),
+              subtitle: SubtitleText(subtitle: 'በዶዒፍ ሀዲሶች ዙርያ የተሰጡ ፈትዋዎች'),
               onTap: () {
                 Navigator.push(
                     context, MaterialPageRoute(builder: (context) => Page9()));
@@ -257,17 +194,8 @@ class Body extends StatelessWidget {
             elevation: 3.0,
             child: ListTile(
               tileColor: Color(0xFF121212),
-              title: Text(
-                'ትዳር 1',
-                style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontStyle: FontStyle.italic,
-                    fontSize: 20.0),
-              ),
-              subtitle: Text(
-                'በትዳር ዙርያ የተሰጡ ፈትዋዎች',
-                style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.w500),
-              ),
+              title: TitleText(title: 'ትዳር 1'),
+              subtitle: SubtitleText(subtitle: 'በትዳር ዙርያ የተሰጡ ፈትዋዎች'),
               onTap: () {
                 Navigator.push(
                     context, MaterialPageRoute(builder: (context) => Page10()));
@@ -278,13 +206,7 @@ class Body extends StatelessWidget {
             elevation: 3.0,
             child: ListTile(
               tileColor: Color(0xFF121212),
-              title: Text(
-                'ትዳር 2',
-                style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontStyle: FontStyle.italic,
-                    fontSize: 20.0),
-              ),
+              title: TitleText(title: 'ትዳር 2'),
               subtitle: Text(
                 'በትዳር ዙርያ የተሰጡ ፈትዋዎች',
                 style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.w500),
