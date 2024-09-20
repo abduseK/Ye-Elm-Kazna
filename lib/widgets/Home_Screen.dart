@@ -38,6 +38,7 @@ class _HomeScreensState extends State<HomeScreens> {
       elevation: 0,
       actions: [
         PopupMenuButton(
+          color: Color(0xFF2A2A2A),
           iconColor: Colors.white,
           itemBuilder: (context) => [
             PopupMenuItem(
@@ -51,7 +52,10 @@ class _HomeScreensState extends State<HomeScreens> {
                     SizedBox(
                       width: 10.0,
                     ),
-                    Text('Share App')
+                    Text(
+                      'Share App',
+                      style: TextStyle(color: Colors.white),
+                    )
                   ],
                 )),
           ],
