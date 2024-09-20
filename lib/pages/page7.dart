@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:share/share.dart';
 import 'package:ye_elm_kazna/files/shortfiles.dart';
 import 'package:ye_elm_kazna/widgets/refractor_widgets.dart';
 
@@ -64,22 +65,45 @@ class _Page7State extends State<Page7> {
               ),
             ),
           ),
-          leading: IconButton(
-            onPressed: () => updateNumbers(-1),
-            icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+          leading: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: CircleAvatar(
+              backgroundColor: Color(0xFF2A2A2A),
+              child: IconButton(
+                iconSize: 18,
+                onPressed: () => updateNumbers(-1),
+                icon: Icon(
+                  Icons.arrow_back_ios,
+                  color: Colors.white,
+                ),
+              ),
+            ),
           ),
           actions: [
-            // IconButton(
-            //   onPressed: () => Share.share(texts[textNumber]),
-            //   icon: Icon(Icons.send, color: Colors.white),
-            // ),
-            IconButton(
-              onPressed: () => Navigator.pop(context),
-              icon: Icon(Icons.list_sharp, color: Colors.white),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: IconButton(
+                onPressed: () => Share.share(texts4[textNumber]),
+                icon: Icon(Icons.send, color: Colors.white),
+              ),
             ),
-            IconButton(
-              onPressed: () => updateNumbers(1),
-              icon: Icon(Icons.arrow_forward_ios, color: Colors.white),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: IconButton(
+                onPressed: () => Navigator.pop(context),
+                icon: Icon(Icons.list_sharp, color: Colors.white),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: CircleAvatar(
+                backgroundColor: Color(0xFF2A2A2A),
+                child: IconButton(
+                  iconSize: 18,
+                  onPressed: () => updateNumbers(1),
+                  icon: Icon(Icons.arrow_forward_ios, color: Colors.white),
+                ),
+              ),
             ),
           ],
         ),
