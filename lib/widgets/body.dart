@@ -29,7 +29,14 @@ class Body extends StatelessWidget {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                      color: kPrimaryColor,
+                      gradient: LinearGradient(
+                        colors: [
+                          Color(0xFF121212),
+                          Color(0xFF1E1E1E)
+                        ], // Dark gradient
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                      ),
                       borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(30.0),
                           bottomRight: Radius.circular(30.0))),
@@ -44,20 +51,20 @@ class Body extends StatelessWidget {
                         EdgeInsets.symmetric(horizontal: 60.0, vertical: 10.0),
                     height: 50.0,
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Color(0xFF2A2A2A),
                         borderRadius: BorderRadius.circular(50),
                         boxShadow: [
                           BoxShadow(
                               offset: Offset(0, 10),
                               blurRadius: 50.0,
-                              color: kPrimaryColor.withOpacity(0.23))
+                              color: Color(0xFF2A2A2A).withOpacity(0.23))
                         ]),
                     child: Marquee(
                       text: 'የ ካዝና ማውጫ',
                       style: TextStyle(
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold,
-                          color: kTextColor),
+                          color: Colors.white),
                       scrollAxis: Axis.horizontal,
                       pauseAfterRound: Duration(seconds: 3),
                       blankSpace: 200,
@@ -74,19 +81,12 @@ class Body extends StatelessWidget {
           Card(
             elevation: 3.0,
             child: ListTile(
-              tileColor: Color(0xFFF9F8FD),
-              title: Text(
-                'አቂዳ',
-                style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontStyle: FontStyle.italic,
-                  fontSize: 20.0,
-                  //fontFamily: 'SassyFrass'
-                ),
+              tileColor: Color(0xFF121212),
+              title: TitleText(
+                title: "አቂዳ",
               ),
-              subtitle: Text(
-                'በአቂዳ ዙርያ የተሰጡ ፈትዋዎች',
-                style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.w500),
+              subtitle: SubtitleText(
+                subtitle: "በአቂዳ ዙርያ የተሰጡ ፈትዋዎች",
               ),
               onTap: () {
                 Navigator.push(context,
@@ -97,18 +97,9 @@ class Body extends StatelessWidget {
           Card(
             elevation: 3.0,
             child: ListTile(
-              tileColor: Color(0xFFF9F8FD),
-              title: Text(
-                'ቢድዐ 1',
-                style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontStyle: FontStyle.italic,
-                    fontSize: 20.0),
-              ),
-              subtitle: Text(
-                'በቢድዐ እና መንሃጅ ዙርያ የተሰጡ ፈትዋዎች',
-                style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.w500),
-              ),
+              tileColor: Color(0xFF121212),
+              title: TitleText(title: "ቢድዐ 1"),
+              subtitle: SubtitleText(subtitle: "በቢድዐ እና መንሃጅ ዙርያ የተሰጡ ፈትዋዎች"),
               onTap: () {
                 Navigator.push(
                     context, MaterialPageRoute(builder: (context) => Page3()));
@@ -118,7 +109,7 @@ class Body extends StatelessWidget {
           Card(
             elevation: 3.0,
             child: ListTile(
-              tileColor: Color(0xFFF9F8FD),
+              tileColor: Color(0xFF121212),
               title: Text(
                 'ቢድዐ 2',
                 style: TextStyle(
@@ -139,7 +130,7 @@ class Body extends StatelessWidget {
           Card(
             elevation: 3.0,
             child: ListTile(
-              tileColor: Color(0xFFF9F8FD),
+              tileColor: Color(0xFF121212),
               title: Text(
                 'ሶላት 1',
                 style: TextStyle(
@@ -160,7 +151,7 @@ class Body extends StatelessWidget {
           Card(
             elevation: 3.0,
             child: ListTile(
-              tileColor: Color(0xFFF9F8FD),
+              tileColor: Color(0xFF121212),
               title: Text(
                 'ሶላት 2',
                 style: TextStyle(
@@ -181,7 +172,7 @@ class Body extends StatelessWidget {
           Card(
             elevation: 3.0,
             child: ListTile(
-              tileColor: Color(0xFFF9F8FD),
+              tileColor: Color(0xFF121212),
               title: Text(
                 'ጾም',
                 style: TextStyle(
@@ -202,7 +193,7 @@ class Body extends StatelessWidget {
           Card(
             elevation: 3.0,
             child: ListTile(
-              tileColor: Color(0xFFF9F8FD),
+              tileColor: Color(0xFF121212),
               title: Text(
                 'ዒድ',
                 style: TextStyle(
@@ -223,7 +214,7 @@ class Body extends StatelessWidget {
           Card(
             elevation: 3.0,
             child: ListTile(
-              tileColor: Color(0xFFF9F8FD),
+              tileColor: Color(0xFF121212),
               title: Text(
                 'ጁሙዓ',
                 style: TextStyle(
@@ -244,7 +235,7 @@ class Body extends StatelessWidget {
           Card(
             elevation: 3.0,
             child: ListTile(
-              tileColor: Color(0xFFF9F8FD),
+              tileColor: Color(0xFF121212),
               title: Text(
                 'ዶዒፍ ሀዲሶች',
                 style: TextStyle(
@@ -265,7 +256,7 @@ class Body extends StatelessWidget {
           Card(
             elevation: 3.0,
             child: ListTile(
-              tileColor: Color(0xFFF9F8FD),
+              tileColor: Color(0xFF121212),
               title: Text(
                 'ትዳር 1',
                 style: TextStyle(
@@ -286,7 +277,7 @@ class Body extends StatelessWidget {
           Card(
             elevation: 3.0,
             child: ListTile(
-              tileColor: Color(0xFFF9F8FD),
+              tileColor: Color(0xFF121212),
               title: Text(
                 'ትዳር 2',
                 style: TextStyle(
@@ -307,7 +298,7 @@ class Body extends StatelessWidget {
           Card(
             elevation: 3.0,
             child: ListTile(
-              tileColor: Color(0xFFF9F8FD),
+              tileColor: Color(0xFF121212),
               title: Text(
                 'ጡሃራ',
                 style: TextStyle(
@@ -328,7 +319,7 @@ class Body extends StatelessWidget {
           Card(
             elevation: 3.0,
             child: ListTile(
-              tileColor: Color(0xFFF9F8FD),
+              tileColor: Color(0xFF121212),
               title: Text(
                 'ሴቶች 1',
                 style: TextStyle(
@@ -349,7 +340,7 @@ class Body extends StatelessWidget {
           Card(
             elevation: 3.0,
             child: ListTile(
-              tileColor: Color(0xFFF9F8FD),
+              tileColor: Color(0xFF121212),
               title: Text(
                 'ሴቶች 2',
                 style: TextStyle(
@@ -368,6 +359,43 @@ class Body extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class SubtitleText extends StatelessWidget {
+  const SubtitleText({
+    required this.subtitle,
+  });
+  final String subtitle;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      subtitle,
+      style: TextStyle(
+          color: Colors.white, fontSize: 15.0, fontWeight: FontWeight.w500),
+    );
+  }
+}
+
+class TitleText extends StatelessWidget {
+  const TitleText({
+    required this.title,
+  });
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      title,
+      style: TextStyle(
+        color: Colors.white,
+        fontWeight: FontWeight.w600,
+        fontStyle: FontStyle.italic,
+        fontSize: 20.0,
+        //fontFamily: 'SassyFrass'
       ),
     );
   }
