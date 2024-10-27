@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.try_app">
    <application
-        android:label="try_app"
+        android:label="የ ዒልም ካዝና"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
