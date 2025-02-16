@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:share/share.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:ye_elm_kazna/files/listfiles4.dart';
 import 'package:ye_elm_kazna/widgets/refractor_widgets.dart';
 

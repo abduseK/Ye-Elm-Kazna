@@ -1,26 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:ye_elm_kazna/constants.dart';
 import 'package:ye_elm_kazna/files/listfiles.dart';
-import 'package:share/share.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:ye_elm_kazna/widgets/refractor_widgets.dart';
 
-
-
 class Page2 extends StatefulWidget {
-
-
-
   @override
-
   _Page2State createState() => _Page2State();
 }
 
 class _Page2State extends State<Page2> {
-
-
-
   @override
-
   int barNumber = 14;
   int textNumber = 14;
   int sourceNumber = 14;
@@ -31,19 +21,16 @@ class _Page2State extends State<Page2> {
       backgroundColor: Color(0xFFF9F8FD),
       appBar: AppBar(
         centerTitle: true,
-        title: Text(appTitless[barNumber],
-        style: TextStyle(
-          fontSize: 16
-        ),
+        title: Text(
+          appTitless[barNumber],
+          style: TextStyle(fontSize: 16),
         ),
         backgroundColor: Color(0xFF0C9869),
         toolbarHeight: 100.0,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(20),
-            bottomRight: Radius.circular(20)
-          )
-        ),
+            borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20))),
         leading: IconButton(
           onPressed: () {
             setState(() {
@@ -51,8 +38,7 @@ class _Page2State extends State<Page2> {
               textNumber--;
               sourceNumber--;
               questionNumber--;
-              if(barNumber < 14)
-              {
+              if (barNumber < 14) {
                 barNumber = 14;
                 questionNumber = 14;
                 sourceNumber = 14;
@@ -60,24 +46,25 @@ class _Page2State extends State<Page2> {
               }
             });
           },
-          icon: Icon(Icons.arrow_back_ios),),
+          icon: Icon(Icons.arrow_back_ios),
+        ),
         actions: [
           TextButton(
-                onPressed: () {
-                  Share.share(
-                    texts[textNumber],
-                  );
-                },
-                child: Icon(Icons.send,
-                color: kBackgroundColor,),
-                
-              ),
+            onPressed: () {
+              Share.share(
+                texts[textNumber],
+              );
+            },
+            child: Icon(
+              Icons.send,
+              color: kBackgroundColor,
+            ),
+          ),
           IconButton(
               onPressed: () {
                 Navigator.pop(context);
               },
-              icon: Icon(Icons.list_sharp)
-          ),
+              icon: Icon(Icons.list_sharp)),
           IconButton(
             onPressed: () {
               setState(() {
@@ -85,17 +72,16 @@ class _Page2State extends State<Page2> {
                 textNumber++;
                 sourceNumber++;
                 questionNumber++;
-                if(barNumber > 34)
-                {
+                if (barNumber > 34) {
                   barNumber = 34;
                   questionNumber = 34;
                   sourceNumber = 34;
                   textNumber = 34;
                 }
-
               });
             },
-            icon: Icon(Icons.arrow_forward_ios),)
+            icon: Icon(Icons.arrow_forward_ios),
+          )
         ],
       ),
       body: SingleChildScrollView(
@@ -107,25 +93,21 @@ class _Page2State extends State<Page2> {
                 color: kBackgroundColor,
                 elevation: 3,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20)
-                ),
+                    borderRadius: BorderRadius.circular(20)),
                 child: Padding(
                   padding: const EdgeInsets.all(18.0),
-                  child: Text(questions[questionNumber],
-                    style: questionTextStyle
-                  ),
+                  child:
+                      Text(questions[questionNumber], style: questionTextStyle),
                 ),
               ),
-              SizedBox(height: 40.0,),
-              Text(
-                texts[textNumber],
-                style: mainTextStyle
+              SizedBox(
+                height: 40.0,
               ),
+              Text(texts[textNumber], style: mainTextStyle),
               SizedBox(
                 height: 20.0,
               ),
               NewCard(sourceNumber: sourceNumber)
-
             ],
           ),
         ),
