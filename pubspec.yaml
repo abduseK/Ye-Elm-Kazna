@@ -30,7 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   marquee: ^2.2.0
   share: ^2.0.4
-  url_launcher: ^6.0.9
+  url_launcher: ^6.3.1
 
 dev_dependencies:
   flutter_test:
