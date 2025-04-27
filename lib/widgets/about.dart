@@ -78,17 +78,27 @@ class About extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   IconButton(
-                    icon: Icon(
-                      Icons.web,
-                      color: Colors.white,
-                    ),
+                    icon: Image.asset('assets/telegram.png',
+                        color: Colors.white, width: 24, height: 24),
                     onPressed: () async {
-                      final url = Uri.parse('https://abdelselamk.vercel.app');
+                      final url = Uri.parse('https://t.me/lazyCoder_I0I0');
                       if (await canLaunchUrl(url)) {
                         await launchUrl(url);
                       }
                     },
-                    tooltip: 'Website',
+                    tooltip: 'Telegram',
+                  ),
+                  IconButton(
+                    icon: Image.asset('assets/linkedin.png',
+                        color: Colors.white, width: 24, height: 24),
+                    onPressed: () async {
+                      final url =
+                          Uri.parse('https://www.linkedin.com/in/ab-adam74');
+                      if (await canLaunchUrl(url)) {
+                        await launchUrl(url);
+                      }
+                    },
+                    tooltip: 'Linkedin',
                   ),
                   IconButton(
                     icon: Image.asset('assets/github.png',
@@ -102,16 +112,20 @@ class About extends StatelessWidget {
                     tooltip: 'Github',
                   ),
                   IconButton(
-                    icon: Image.asset('assets/telegram.png',
-                        color: Colors.white, width: 24, height: 24),
+                    icon: Image.asset(
+                      'assets/web.png',
+                      color: Colors.white,
+                      width: 24,
+                      height: 24,
+                    ),
                     onPressed: () async {
-                      final url = Uri.parse('https://t.me/lazyCoder_I0I0');
+                      final url = Uri.parse('https://abdelselamk.vercel.app');
                       if (await canLaunchUrl(url)) {
                         await launchUrl(url);
                       }
                     },
-                    tooltip: 'Telegram',
-                  )
+                    tooltip: 'Website',
+                  ),
                 ],
               ),
               SizedBox(

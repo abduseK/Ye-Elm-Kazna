@@ -60,6 +60,8 @@ flutter:
     - assets/image2.jpg
     - assets/github.png
     - assets/telegram.png
+    - assets/web.png
+    - assets/linkedin.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
