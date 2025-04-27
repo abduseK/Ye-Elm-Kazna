@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ye_elm_kazna/widgets/about.dart';
 import 'package:ye_elm_kazna/widgets/body.dart';
 import 'package:ye_elm_kazna/constants.dart';
 import 'package:ye_elm_kazna/widgets/drawer.dart';
@@ -43,24 +44,50 @@ class _HomeScreensState extends State<HomeScreens> {
           itemBuilder: (context) => [
             PopupMenuItem(
                 value: 1,
-                child: Row(
+                child: Column(
                   children: [
-                    Icon(
-                      Icons.share,
-                      color: kPrimaryColor,
+                    Row(
+                      children: [
+                        Text(
+                          'About',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        SizedBox(
+                          width: 10.0,
+                        ),
+                        Icon(
+                          Icons.info,
+                          color: kPrimaryColor,
+                        ),
+                      ],
                     ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      'Share App',
-                      style: TextStyle(color: Colors.white),
-                    )
                   ],
                 )),
+            PopupMenuItem(
+              value: 2,
+              child: Row(
+                children: [
+                  Text(
+                    'Theme',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Switch(
+                    value: true,
+                    onChanged: (_) {},
+                    activeColor: kPrimaryColor,
+                  )
+                ],
+              ),
+            )
           ],
           onSelected: (value) {
-            if (value == 1) {}
+            if (value == 1) {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => About()));
+            }
           },
         ),
       ],
