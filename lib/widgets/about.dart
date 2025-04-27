@@ -38,7 +38,7 @@ class About extends StatelessWidget {
               SizedBox(height: 20),
               CircleAvatar(
                 radius: 60,
-                backgroundImage: AssetImage('assets/image.jpg'),
+                backgroundImage: AssetImage('assets/image2.jpg'),
                 backgroundColor: Colors.transparent,
               ),
               SizedBox(
@@ -54,7 +54,7 @@ class About extends StatelessWidget {
               ),
               SizedBox(height: 10),
               Text(
-                'Full stack software engineer, \ncontent creator',
+                'Full stack software engineer, \nContent creator',
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
@@ -64,7 +64,7 @@ class About extends StatelessWidget {
               ),
               SizedBox(height: 20),
               Text(
-                'Hi👋 I\'m Abdulselam kemal. Developer of this app, \nif you\'d like to chat, feel free to drop a message',
+                'Hi👋 I\'m Abdulselam kemal, developer of this app. \nIf you\'d like to chat, feel free to drop a message',
                 style: TextStyle(
                   color: Colors.white,
                   fontFamily: 'Mona Sans',
